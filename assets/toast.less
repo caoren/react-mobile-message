@@ -1,0 +1,40 @@
+.c-toast {
+    position:fixed;
+    left:50%;
+    top:50%;
+    color:#fff;
+    border-radius:4px;
+    padding:10px 20px;
+    min-width:100px;
+    max-width:230px;
+    line-height:1.4;
+    text-align:center;
+    word-wrap:break-word;
+    background-color:rgba(0,0,0,0.6);
+    transform:translate(-50%,-50%);
+    z-index:1000;
+}
+.toastmask-enter {
+    opacity:0.1;
+    z-index:100;
+}
+.toastmask-enter.toastmask-active {
+    opacity:1;
+    transition:opacity 300ms ease-in;
+}
+.toastmask-appear {
+    opacity:0.1;
+}
+.toastmask-appear.toastmask-appear-active {
+    opacity:1;
+    transition:opacity 300ms ease-in;
+}
+.toastmask-leave {
+    opacity:1;
+    z-index:100;
+}
+.toastmask-leave.toastmask-leave-active {
+    opacity:0;
+    transition:opacity 300ms ease-in-out;
+}
+

@@ -1,0 +1,99 @@
+.cm-mask{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:110;
+    background-color:rgba(0,0,0,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.cmmask-enter{
+    opacity:0.1;
+    z-index:100;
+}
+.cmmask-enter.cmmask-enter-active{
+    opacity:1;
+    transition:opacity 300ms ease-in;
+}
+.cmmask-appear{
+    opacity:0.1;
+}
+.cmmask-appear.cmmask-appear-active {
+    opacity:1;
+    transition:opacity 300ms ease-in;
+}
+.cmmask-leave{
+    opacity:1;
+    z-index:100;
+}
+.cmmask-leave.cmmask-leave-active {
+    opacity:0;
+    transition:opacity 300ms ease-in-out;
+}
+//modal
+.c-modal{
+    width:270px;
+    max-height:300px;
+    overflow:hidden;
+    background-color:#F5F5F5;
+    border-radius:7px;
+    display:flex;
+    flex-direction:column;
+}
+.c-modal-title{
+    font-size:18px;
+    line-height:20px;
+    min-height:20px;
+    font-weight:bold;
+    align-items:flex-end;
+    text-align:center;
+    padding:15px 22px 0;
+}
+.c-modal-content{
+    flex:1;
+    height:100%;
+    padding:0 22px;
+    margin-top:5px;
+    min-height:40px;
+    font-size:14px;
+    line-height:1.2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.c-modal-bottom{
+    flex:1;
+    display:flex;
+    border-top:1px #dbdbdb solid;
+    margin-top:15px;
+    height:44px;
+    min-height:44px;
+    line-height:44px;
+    text-align:center;
+}
+.c-modal-bton{
+    display:block;
+    flex:1;
+    width:100%;
+    color:#0076FF;
+    font-size:17px;
+    border-right:1px #dbdbdb solid;
+    &:last-child{
+        border-right:0;
+    }
+    &.gray{
+        color:#1B1C20;
+    }
+}
+.hairline{
+    .c-modal-bottom{
+        border-top-width:0.5px;
+    }
+    .c-modal-bton{
+        border-right-width:0.5px;
+    }
+}

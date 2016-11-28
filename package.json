@@ -1,0 +1,57 @@
+{
+  "name": "react-mobile-message",
+  "version": "1.0.0",
+  "homepage": "https://github.com/caoren/react-mobile-message",
+  "keywords": [
+    "react",
+    "message",
+    "alert",
+    "toast",
+    "confirm",
+    "mobile"
+  ],
+  "bugs": {
+    "url": "https://github.com/caoren/react-mobile-message/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Cao Ren"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:caoren/react-mobile-message.git"
+  },
+  "main": "lib/index.js",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^1.1.1",
+    "precss": "^1.4.0",
+    "react": "15.0.2",
+    "react-addons-css-transition-group": "15.0.2",
+    "react-dom": "15.0.2",
+    "react-hot-api": "0.5.0",
+    "react-hot-loader": "1.3.0",
+    "style-loader": "^0.13.1",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
+  },
+  "peerDependencies": {
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
+  },
+  "scripts": {
+    "prepublish": "babel src/ --out-dir lib/",
+    "build": "NODE_ENV=production webpack -p --config demo/webpack.config.js",
+    "dev": "webpack-dev-server --port 7909 --content-base demo/ --config demo/webpack.config.js --progress --hot --inline"
+  }
+}
