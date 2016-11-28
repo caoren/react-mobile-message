@@ -28,6 +28,9 @@ var config = {
             loader: ExtractTextPlugin.extract('style', '!css!less!postcss')
         }]
     },
+    resolve: {
+        extensions: ['','.jsx','.js']
+    },
     devtool: isDeploy ? false : 'eval-source-map',
     jshint : {
         "esnext" : true

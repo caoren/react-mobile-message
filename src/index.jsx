@@ -1,9 +1,9 @@
 import React,{PropTypes,Component} from 'react';
 import ReactDOM from 'react-dom';
 //components
-import toastMethod from './toast.jsx';
-import alertMethod from './alert.jsx';
-import confirmMethod from './confirm.jsx';
+import toastMethod from './toast';
+import alertMethod from './alert';
+import confirmMethod from './confirm';
 
 export const toast = toastMethod;
 export const alert = alertMethod;
