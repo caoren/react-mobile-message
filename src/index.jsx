@@ -1,10 +1,11 @@
 import React,{PropTypes,Component} from 'react';
 import ReactDOM from 'react-dom';
 //components
-import toastMethod from './toast';
-import alertMethod from './alert';
-import confirmMethod from './confirm';
+import toast from './toast';
+import alert from './alert';
+import confirm from './confirm';
 
-export const toast = toastMethod;
-export const alert = alertMethod;
-export const confirm = confirmMethod;
+export {toast}
+export {alert}
+export {confirm}
+export default {toast,alert,confirm}

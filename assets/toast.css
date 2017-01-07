@@ -1,12 +1,13 @@
 .c-toast {
   position: fixed;
+  display: table;
   left: 50%;
   top: 50%;
   color: #fff;
   border-radius: 4px;
   padding: 10px 20px;
   min-width: 100px;
-  max-width: 230px;
+  max-width: 240px;
   line-height: 1.4;
   text-align: center;
   word-wrap: break-word;

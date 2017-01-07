@@ -115,9 +115,6 @@
 .c-modal-bton:last-child {
   border-right: 0;
 }
-.c-modal-bton.gray {
-  color: #1B1C20;
-}
 .hairline .c-modal-bottom {
   border-top-width: 0.5px;
 }
