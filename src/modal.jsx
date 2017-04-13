@@ -49,6 +49,14 @@ class Modal extends Component{
                     <span className="c-modal-bton" key={n} onClick={func}>{typeof label == 'string' ? label : (label())}</span>
                 )
             });
+            let contNode;
+            if(content){
+                contNode = (
+                    <div className="c-modal-content">
+                        {typeof content == 'string' ? content : (content())}
+                    </div>
+                );
+            }
             MaskNode = (
                 <div className="cm-mask" onClick={self.close}></div>
             );
@@ -58,9 +66,7 @@ class Modal extends Component{
                         <div className="c-modal-title">
                             {typeof title == 'string' ? title : (title())}
                         </div>
-                        <div className="c-modal-content">
-                            {typeof content == 'string' ? content : (content())}
-                        </div>
+                        {contNode}
                         <div className="c-modal-bottom">
                             {btonNodes}
                         </div>

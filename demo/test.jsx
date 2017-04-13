@@ -19,7 +19,6 @@ class Test extends Component{
                 let styleObj = {color : 'red'};
                 return (<span style={styleObj}>测试一下title</span>);
             },
-            content : '测试一下alert',
             animation : 'opacity'
         });
     }
