@@ -2,11 +2,11 @@ import React,{PropTypes,Component} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './modal';
 
+const empty = undefined;
 let DefaultOptions = {
-    title : '',
-    titleStyle : undefined,
-    content : '',
-    richContent : '',
+    title : empty,
+    content : empty,
+    animation : empty,
     btons : []
 }
 export default function alert(option = {}){
@@ -20,8 +20,7 @@ export default function alert(option = {}){
         else{
             tobj[p] = [{
                 label : option.doneLabel || '确定',
-                func : option.done,
-                style : option.doneStyle
+                func : option.done
             }];
         }
     }
