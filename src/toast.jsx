@@ -1,4 +1,6 @@
-import '../assets/toast.css';
+if(typeof window != 'undefined'){
+    require('../assets/toast.css');
+}
 import React,{PropTypes,Component} from 'react';
 import ReactDOM from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
