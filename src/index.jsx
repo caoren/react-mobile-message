@@ -1,4 +1,4 @@
-import React,{PropTypes,Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 //components
 import toast from './toast';

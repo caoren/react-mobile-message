@@ -1,8 +1,6 @@
-if(typeof window != 'undefined'){
-    require('../assets/toast.css');
-}
-import React,{PropTypes,Component} from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const ENTERTIME = 300;

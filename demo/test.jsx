@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import '../assets/toast.css';
+import '../assets/modal.css';
 import Message,{toast} from '../src/index.jsx';
 
 class Test extends Component{
