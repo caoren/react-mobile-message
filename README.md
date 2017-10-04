@@ -5,9 +5,9 @@
 ```js
 import "react-mobile-message/assets/toast.css"
 import "react-mobile-message/assets/modal.css"
-import Message from '../src/index.jsx';
-Message.toast('测试toast消息测试toast消息');
-Message.alert({
+import {toast, alert, confirm} from '../src/index.jsx';
+toast('测试toast消息测试toast消息');
+alert({
     title : function(){
         let styleObj = {color : 'red'};
         return (<span style={styleObj}>测试一下title</span>);

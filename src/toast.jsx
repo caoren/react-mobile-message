@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransition from 'react-transition-group/CSSTransition';
 
 const ENTERTIME = 300;
-const LEAVETIME = 300;
 class Toast extends Component{
     constructor(props){
         super(props)
@@ -19,7 +18,7 @@ class Toast extends Component{
             });
             window.setTimeout(() => {
                 this.teardown();
-            },LEAVETIME);
+            },ENTERTIME);
         },this.props.timeout);
     }
     teardown(){
@@ -33,14 +32,10 @@ class Toast extends Component{
     render(){
         let {show} = this.state;
         let {text} = this.props;
-        var toastNode;
-        if(show){
-            toastNode = (<div className="c-toast">{text}</div>);
-        }
         return (
-            <ReactCSSTransitionGroup component="div" transitionName="toastmask" transitionEnterTimeout={ENTERTIME} transitionAppear={true} transitionAppearTimeout={ENTERTIME} transitionLeaveTimeout={LEAVETIME}>
-                {toastNode}
-            </ReactCSSTransitionGroup>
+            <CSSTransition in={show} classNames="toastmask" timeout={ENTERTIME} appear={true} enter={true} exit={true}>
+                <div className="c-toast">{text}</div>
+            </CSSTransition>
         )
     }
 }

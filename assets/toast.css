@@ -13,15 +13,16 @@
   word-wrap: break-word;
   word-break: break-word;
   background-color: rgba(0, 0, 0, 0.6);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 1000;
 }
 .toastmask-enter {
   opacity: 0.1;
-  z-index: 100;
 }
 .toastmask-enter.toastmask-active {
   opacity: 1;
+  -webkit-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
 }
 .toastmask-appear {
@@ -29,13 +30,14 @@
 }
 .toastmask-appear.toastmask-appear-active {
   opacity: 1;
+  -webkit-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
 }
-.toastmask-leave {
+.toastmask-exit {
   opacity: 1;
-  z-index: 100;
 }
-.toastmask-leave.toastmask-leave-active {
+.toastmask-exit.toastmask-exit-active {
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }

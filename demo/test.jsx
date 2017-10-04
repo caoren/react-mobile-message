@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../assets/toast.css';
 import '../assets/modal.css';
-import Message,{toast} from '../src/index.jsx';
+import {toast, alert, confirm} from '../src/index.jsx';
 
 class Test extends Component{
     constructor(props){
@@ -16,7 +16,7 @@ class Test extends Component{
         toast('测试toast消息测试toast消息');
     }
     showAlert(){
-        Message.alert({
+        alert({
             title : function(){
                 let styleObj = {color : 'red'};
                 return (<span style={styleObj}>测试一下title</span>);
@@ -25,7 +25,7 @@ class Test extends Component{
         });
     }
     showRichAlert(){
-        Message.alert({
+        alert({
             title : '通知',
             content : function(){
                 let styleObj = {color : 'red'};
@@ -42,14 +42,14 @@ class Test extends Component{
     }
     showConfirm(){
         //console.log(toast)
-        Message.confirm({
+        confirm({
             title : '确认要删除吗？',
             content : '请慎重执行该操作，操作后不能撤销',
             done : function(){
-                Message.toast('点击yes');
+                toast('点击yes');
             },
             cancel : function(){
-                Message.toast('点击no');
+                toast('点击no');
             }
         })
     }
